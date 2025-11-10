@@ -5,17 +5,17 @@ search an element from an array.*/
 int a[50];
 int search(int item1, int n)
 {
-    int i,success=0;
+    int i,success=-1;
     for(i=0;i<n;i++)
     {
         if(a[i]==item1)
         {
-            success=1;
+            success=i;
             break;
         }
     }
-    if(success==1)
-    printf("\nItem found");
+    if(success!=-1)
+    printf("\nItem found:%d", success +1);
     else
     printf("\nNot found");
     return success;

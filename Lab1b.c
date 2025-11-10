@@ -5,11 +5,11 @@
 #define max 50
 int main() {
 
-int i,n,success=0,item;
+int i,n,success=-1,item;
 int a[max];
 printf("\n Enter n:");
 scanf("%d",&n);
-printf("\n Enter the array elements:");
+printf("\n Enter the no of the array elements:");
 for (i=0;i<n;i++)
 {
 scanf("%d",&a[i]);
@@ -20,12 +20,12 @@ scanf("%d",&a[i]);
 for (i=0;i<n;i++)
 {   if (a[i]==item)
     {
-        success=1;
+        success=i;
         break;
     }
 }
-if (success==1)
-printf("\n the element is found:");
+if (success!=-1)
+printf("\n the element is found: %d", success +1);
 else
 printf("\n not found:");
  return 0;
